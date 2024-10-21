@@ -53,7 +53,8 @@ const displayProducts = async (page = 1) => {
             return `<div class='product'>
             <img src="${product.thumbnail}" alt="${product.description}"/> 
             <h3>${product.title}</h3>
-            <span>${product.price}</span>
+            <span style="display: block;">$${product.price}</span> 
+            <button onclick="viewProductDetails(${product.id})" class="view-details-btn">View Details</button>
         </div>`
         }).join(' ');
 
@@ -91,7 +92,10 @@ const displayProducts = async (page = 1) => {
 }
 displayCategories();
 displayProducts();
-
+// Function to redirect to product details page
+const viewProductDetails = (productId) => {
+    window.location.href = `productDetails.html?productId=${productId}`;
+}
 
 window.onscroll = function () {
     const nav = document.querySelector(".header");

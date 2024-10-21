@@ -214,3 +214,21 @@
     display: inline-block;
     font-size: 25px;
 }
+
+
+
+
+.view-details-btn {
+    margin-top: 5px; /* Adds space between the button and the price */
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.view-details-btn:hover {
+    background-color: #0056b3;
+}
